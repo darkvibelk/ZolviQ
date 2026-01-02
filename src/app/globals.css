@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-brand: var(--font-quicksand);
+
+  --color-brand-cyan: #06b6d4;
+  --color-brand-blue: #3b82f6;
+  --color-cyber-dark: #020617;
+  
+  /* Smooth scrolling */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Glass Utility Classes can be composed via @utility if needed, or just standard classes */
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-white/10 shadow-xl;
+  }
+}
